@@ -85,6 +85,7 @@
 					<section data-markdown>
 						# Customization
 						![alfred settings](../img/alfred-settings.png)
+						<br><br>
 						- [This post](http://flipstewart.com/2014/11/13/alfred-for-developers/) on Alfred Settings for Devs
 					</section>
 					<section>
@@ -202,50 +203,39 @@
 					</section>
 
 					<section>
-						# Customizing the Terminal
-						<code>
-							<pre>
-								{
-									"color_scheme": "Packages/User/Monokai (SL).tmTheme",
-									"ignored_packages":
-									[
-										"Markdown",
-										"Vintage"
-									],
+						<h1>Customizing Your User Settings</h1>
+					</section>
 
-									// line highlighting
-									"highlight_line": true,
+					<section>
+						<pre><code>
+//increase carat size
+"caret_extra_bottom": 2,
+"caret_extra_top": 2,
+"caret_extra_width": 2,
+"caret_style": "solid",
+"wide_caret": true,
 
-									//increase carat size
-									"caret_extra_bottom": 2,
-									"caret_extra_top": 2,
-									"caret_extra_width": 2,
-									"caret_style": "solid",
-									"wide_caret": true,
+// bracket highlighters
+"match_brackets": true, 
+"match_brackets_angle": true,
+"match_brackets_braces": true,
+"match_brackets_content": true,
+"match_brackets_square": true,
 
-									// bracket highlighters
-									"match_brackets": true, 
-									"match_brackets_angle": true,
-									"match_brackets_braces": true,
-									"match_brackets_content": true,
-									"match_brackets_square": true,
+// modified tabs glow brighter
+"highlight_modified_tabs": true,
 
-									// modified tabs glow brighter
-									"highlight_modified_tabs": true,
+// more space between lines
+"line_padding_bottom": 1,
+"line_padding_top": 1,
 
-									// more space between lines
-									"line_padding_bottom": 1,
-									"line_padding_top": 1,
+// bold folders
+"bold_folder_labels": true,
 
-									// bold folders
-									"bold_folder_labels": true,
-
-									// indentation highlight on active
-									"indent_guide_options": ["draw_normal", "draw_active"],
-								}
-
-							</pre>
-						</code>
+// indentation highlight on active
+"indent_guide_options": ["draw_normal", "draw_active"],
+							</code>
+						</pre>
 					</section>
 				</section>
 
@@ -283,13 +273,58 @@
 					</section>
 
 					<section>
-						demo!
+					<h1>The "WTF" Alias</h1>
+						<pre><code>
+# restart terminal
+alias wtf="source ~/.zshrc"
+						</code></pre>
 					</section>
 
 					<section>
-						<h1>Putting it all Together:</h1>
-						<h2 class="fragment">Make it Work for You!</h2>
-						<p class="fragment">Let Me Explain...</p>
+					<h1>Absolute Links</h1>
+						<pre><code>
+# open these directories from anywhere
+alias Dev="~/Desktop/Dev"
+alias Blogs="~/Documents/Blogs"
+						</code></pre>
+					</section>
+
+					<section>
+					<h1>Enter Directory when you Make It</h1>
+						<pre><code>
+function mkd() {
+	mkdir -p "$@" && cd "$@"
+}
+						</code></pre>
+					</section>
+
+					<section>
+						<h1>Make it Work for You!</h1>
+						<a href="http://unakravets.com/personal-goals">Full Blog Post</a>
+						<pre><code>
+# edit personal goals 
+alias pg-ed="subl ~/Desktop/Dev/personal-goals"
+
+# check off personal goals (open main README.md in vim)
+alias pg-ch="vim ~/Desktop/Dev/personal-goals/README.md"
+
+# add to content list (opens content list folder in vim)
+# i.e. pg-add blog-post or pd-add resource
+function pg-add() {
+	if [ $# -eq 0 ]; then
+			print "Oops. Please enter a content type! (i.e. pg-add video)"
+		else
+			vim ~/Desktop/Dev/personal-goals/content-list/"$@"s.md
+	fi
+}
+
+# push my changes to my github master branch and open the page
+alias pg-gh="cd ~/Desktop/Dev/personal-goals &&
+	git add -A &&
+	git commit -m 'push from terminal' &&
+	git push origin master &&
+	open http://github.com/una/personal-goals"
+						</code></pre>
 					</section>
 
 					<section>
@@ -305,6 +340,12 @@
 					<section>
 						<img src="img/keyboard-ninja-ex.jpg" alt="Keyboard Ninja Picture">
 					</section>
+
+					<section>
+						<img src="img/cmdclub.jpg" alt=""><br>
+						<a href="http://cmd.club">cmd.club</a>
+					</section>
+
 					<section data-markdown>
 						- [Blog Post on Becoming a Keyboard Ninja](http://una.github.io/keyboard-ninja/)
 						- [Team Treehouse Terminal Basics](https://teamtreehouse.com/)
