@@ -26,7 +26,7 @@
 
 		<!-- TEMP! -->
 		<style>
-		code { color: #F18A8E;}
+		code, kbd { color: #F18A8E;}
 		</style>
 	</head>
 
@@ -54,6 +54,47 @@
 					</aside>
 				</section>
 
+				<section>
+					<section>
+						<h1>Mac Keyboard Shortcuts</h1>
+						<aside class="notes">
+							- Things to make your workflow fast moving around your page.
+							- this is mostly going to be for a Mac env (sorry)
+						</aside>
+					</section>
+
+					<section>
+						<h1> Common Mac shortcuts </h1>
+						<ul>
+						<li class="fragment"> navigate open apps: <kbd>cmd</kbd> + <kbd>tab</kbd> </li>
+						<li class="fragment"> screen shot entire screen: <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>3</kbd> </li>
+						<li class="fragment"> screen shot with options: <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>4</kbd> </li>
+						<li class="fragment"> open preferences for the front app: <kbd>cmd</kbd> + <kbd>,</kbd> </li>
+						</ul>
+					</section>
+
+					<section>
+						<h1> Finder shortcuts </h1>
+						<ul>
+						<li class="fragment"> duplicate a file: <kbd>cmd</kbd> + <kbd>d</kbd> </li>
+						<li class="fragment"> create a new folder: <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>n</kbd> </li>
+						<li class="fragment"> move selected item to trash: <kbd>cmd</kbd> + <kbd>delete</kbd> </li>
+						<li class="fragment"> empty the trash: <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>delete</kbd> </li>
+						<li class="fragment"> opens display prefs: <kbd>option</kbd> + <kbd>brightness key</kbd> </li>
+						</ul>
+					</section>
+
+					<section>
+						<h1> Finder Naviation </h1>
+						<ul>
+						<li class="fragment"> Open Desktop Folder: <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>d</kbd> </li>
+						<li class="fragment"> Open Downloads Folder: <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>l</kbd> </li>
+						<li class="fragment"> Open Documents Folder: <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>o</kbd> </li>
+						<li class="fragment"> Open Airdrop Utility: <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>r</kbd> </li>
+						<li class="fragment"> <a href="https://support.apple.com/en-us/HT201236">More Mac Shortcuts</a> </li>
+						</ul>
+					</section>
+				</section>
 
 				<section>
 					<section>
@@ -122,7 +163,7 @@
 							html:5
 							html:5((header>(nav>ul>li*3))+main>.container>(aside>ul.news>li*3))
 
-							CSS:  
+							CSS:
 
 							w100p
 							w100
@@ -137,6 +178,8 @@
 
 					<section>
 						<a href="http://docs.emmet.io/cheat-sheet/">The Emmet Cheatsheet</a>
+						<br><br>
+						<iframe src="http://docs.emmet.io/cheat-sheet/" width="100%" height="500px"></iframe>
 					</section>
 
 					<section>
@@ -206,7 +249,7 @@
 					</section>
 
 					<section>
-						<h1>Customizing Your User Settings</h1>
+						<h1>Step 6: Customizing Your User Settings</h1>
 					</section>
 
 					<section>
@@ -219,7 +262,7 @@
 "wide_caret": true,
 
 // bracket highlighters
-"match_brackets": true, 
+"match_brackets": true,
 "match_brackets_angle": true,
 "match_brackets_braces": true,
 "match_brackets_content": true,
@@ -240,6 +283,15 @@
 							</code>
 						</pre>
 					</section>
+
+					<section>
+						<h1>Step 7: More Fun Facts</h1>
+						<ul>
+							<li>show clipboard history: <kbd>cmd</kbd> + <kbd>K</kbd>, <kbd>cmd</kbd> + <kbd>V</kbd></li>
+						</ul>
+
+					</section>
+
 				</section>
 
 
@@ -294,6 +346,40 @@ alias Blogs="~/Documents/Blogs"
 					</section>
 
 					<section>
+					<h1>Starting a Project</h1>
+						<pre><code>
+# install all the things
+alias start-project="bundle install && bower install && npm install"
+						</code></pre>
+					</section>
+
+					<section>
+					<h1>Get Your IP</h1>
+						<pre><code>
+alias myip='curl ip.appspot.com'
+						</code></pre>
+					</section>
+
+					<section>
+					<h1>Git Visualization</h1>
+						<pre><code>
+# pretty visual git history
+alias git-pretty="git log --graph --oneline --all --decorate"
+						</code></pre>
+					</section>
+
+					<section>
+					<h1>Emoji Reference</h1>
+						<pre><code>
+# open up emoji cheat sheet in browser
+alias emojis="open http://www.emoji-cheat-sheet.com/"
+
+</code></pre>
+					</section>
+
+
+
+					<section>
 					<h1>Enter Directory when you Make It</h1>
 						<pre><code>
 function mkd() {
@@ -306,7 +392,7 @@ function mkd() {
 						<h1>Make it Work for You!</h1>
 						<a href="http://unakravets.com/personal-goals">Full Blog Post</a>
 						<pre><code>
-# edit personal goals 
+# edit personal goals
 alias pg-ed="subl ~/Desktop/Dev/personal-goals"
 
 # check off personal goals (open main README.md in vim)
@@ -331,6 +417,7 @@ alias pg-gh="cd ~/Desktop/Dev/personal-goals &&
 						</code></pre>
 					</section>
 
+
 					<section>
 						<img src="img/ready-shirt.gif" alt="I'm Ready">
 					</section>
@@ -345,17 +432,15 @@ alias pg-gh="cd ~/Desktop/Dev/personal-goals &&
 						<img src="img/keyboard-ninja-ex.jpg" alt="Keyboard Ninja Picture">
 					</section>
 
-					<section>
-						<img src="img/cmdclub.jpg" alt=""><br>
-						<a href="http://cmd.club">cmd.club</a>
-					</section>
-
 					<section data-markdown>
 						- [Blog Post on Becoming a Keyboard Ninja](http://una.github.io/keyboard-ninja/)
 						- [Team Treehouse Terminal Basics](https://teamtreehouse.com/)
 						- [More Terminal Tips](http://computers.tutsplus.com/tutorials/40-terminal-tips-and-tricks-you-never-thought-you-needed--mac-51192)
+						- [Wes Bos' Blog](http://wesbos.com)
+						- [Command Line Power User](http://commandlinepoweruser.com/)
+						- [Blog Post on Overused ST2 Shortcuts](http://viget.com/extend/my-overused-sublime-text-keyboard-shortcuts)
 					</section>
-					
+
 				</section>
 
 
